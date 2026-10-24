@@ -5,17 +5,14 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/borisovodov/doru/releases/download/v0.0.11/doru-windows-x64.exe#/dl.7z",
-            "hash": "8742e14b4aa9d3e09f74bacd4bd3de1891c2b09daecad846401608928da9f299"
+            "url": "https://github.com/borisovodov/doru/releases/download/v0.0.11/doru-windows-x64.zip",
+            "hash": "0000000000000000000000000000000000000000000000000000000000000000"
         },
         "arm64": {
-            "url": "https://github.com/borisovodov/doru/releases/download/v0.0.11/doru-windows-arm64.exe#/dl.7z",
-            "hash": "b377818583b8a55c0ade970461699b134643e87c7d9b033e977519f49580f742"
+            "url": "https://github.com/borisovodov/doru/releases/download/v0.0.11/doru-windows-arm64.zip",
+            "hash": "0000000000000000000000000000000000000000000000000000000000000000"
         }
     },
-    "post_install": [
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\[NSIS].nsi\" -Recurse -Force -ErrorAction SilentlyContinue"
-    ],
     "shortcuts": [
         [
             "doru.exe",
@@ -28,10 +25,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/borisovodov/doru/releases/download/v$version/doru-windows-x64.exe#/dl.7z"
+                "url": "https://github.com/borisovodov/doru/releases/download/v$version/doru-windows-x64.zip"
             },
             "arm64": {
-                "url": "https://github.com/borisovodov/doru/releases/download/v$version/doru-windows-arm64.exe#/dl.7z"
+                "url": "https://github.com/borisovodov/doru/releases/download/v$version/doru-windows-arm64.zip"
             }
         }
     }

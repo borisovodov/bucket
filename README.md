@@ -16,15 +16,17 @@ scoop install <app>
 |---|---|---|
 | [doru](bucket/doru.json) | Local-first genealogy for the AI era | https://doru.family |
 
-Dóru's manifest installs the Windows NSIS build portably: the installer is
-extracted as a 7z archive into the scoop app directory, so no registry keys
-or file associations are created — open `.doru` files from inside the app.
-The app's own data lives in `%APPDATA%\Doru`, outside the scoop directory.
+Dóru's manifest installs the portable zip from the Windows release (the
+plain app directory, no installer): no registry keys or file associations
+are created — open `.doru` files from inside the app. The app's own data
+lives in `%APPDATA%\Doru`, outside the scoop directory.
 
 ## Updating manifests
 
 Every manifest carries `checkver`/`autoupdate` blocks that track the
-upstream GitHub releases:
+upstream GitHub releases, and the `excavator.yml` workflow checks for new
+releases every four hours and commits manifest updates (version, URLs, and
+hashes) automatically.
 
 ```pwsh
 .\bin\checkver.ps1 -u      # list outdated manifests and download new hashes
