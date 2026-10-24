@@ -25,10 +25,18 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/borisovodov/doru/releases/download/v$version/doru-windows-x64.zip"
+                "url": "https://github.com/borisovodov/doru/releases/download/v$version/doru-windows-x64.zip",
+                "hash": {
+                    "url": "https://api.github.com/repos/borisovodov/doru/releases/latest",
+                    "jsonpath": "$.assets[?(@.name=='doru-windows-x64.zip')].digest"
+                }
             },
             "arm64": {
-                "url": "https://github.com/borisovodov/doru/releases/download/v$version/doru-windows-arm64.zip"
+                "url": "https://github.com/borisovodov/doru/releases/download/v$version/doru-windows-arm64.zip",
+                "hash": {
+                    "url": "https://api.github.com/repos/borisovodov/doru/releases/latest",
+                    "jsonpath": "$.assets[?(@.name=='doru-windows-arm64.zip')].digest"
+                }
             }
         }
     }
