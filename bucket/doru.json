@@ -1,16 +1,16 @@
 {
-    "version": "0.0.14",
+    "version": "0.0.18",
     "description": "Local-first genealogy for the AI era",
     "homepage": "https://doru.family",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/borisovodov/doru/releases/download/v0.0.14/doru-windows-x64.zip",
-            "hash": "f5fdad85df9bcc453bd5bf2d6d434915d3c8bc5ac6a39311c312fa8ab60ce25d"
+            "url": "https://github.com/borisovodov/doru/releases/download/v0.0.18/doru-windows-x64.zip",
+            "hash": "42d438d7ba167651317484c75ba7220def7d913eb94d4e193175e615c41008e8"
         },
         "arm64": {
-            "url": "https://github.com/borisovodov/doru/releases/download/v0.0.14/doru-windows-arm64.zip",
-            "hash": "3b5703e524341c7b4a379fe1ee5e9cdc4e8eaba3c5d9aa314a02485915b24610"
+            "url": "https://github.com/borisovodov/doru/releases/download/v0.0.18/doru-windows-arm64.zip",
+            "hash": "1804d2ab7651939cb50fbbd6b9edb9061921e3b9d6a818f1057b43747724bd57"
         }
     },
     "shortcuts": [
