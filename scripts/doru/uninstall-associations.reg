@@ -1,0 +1,21 @@
+Windows Registry Editor Version 5.00
+
+; Removes the Dóru file association registration from install-associations.reg.
+
+[-HKEY_CURRENT_USER\Software\Doru]
+
+[HKEY_CURRENT_USER\Software\RegisteredApplications]
+"Doru"=-
+
+[-HKEY_CURRENT_USER\Software\Classes\Doru.Tree]
+[-HKEY_CURRENT_USER\Software\Classes\Doru.Gedcom]
+[-HKEY_CURRENT_USER\Software\Classes\Doru.Gedzip]
+
+[HKEY_CURRENT_USER\Software\Classes\.doru\OpenWithProgids]
+"Doru.Tree"=-
+
+[HKEY_CURRENT_USER\Software\Classes\.ged\OpenWithProgids]
+"Doru.Gedcom"=-
+
+[HKEY_CURRENT_USER\Software\Classes\.gdz\OpenWithProgids]
+"Doru.Gedzip"=-

@@ -1,0 +1,61 @@
+Windows Registry Editor Version 5.00
+
+; Opt-in file associations for Dóru installed via Scoop. The manifest's
+; post_install substitutes the `$doru` placeholder with the installation
+; directory (and swaps HKEY_CURRENT_USER for HKEY_LOCAL_MACHINE on global
+; installs) before the user imports this file with `reg import`.
+;
+; The extension defaults are deliberately left alone: the ProgIDs are
+; registered via OpenWithProgids and the Capabilities declaration, so Dóru
+; shows up in "Open with" and "Default apps" without stealing associations.
+
+[HKEY_CURRENT_USER\Software\Doru]
+"InstallLocation"="$doru"
+
+[HKEY_CURRENT_USER\Software\Doru\Capabilities]
+"ApplicationName"="Dóru"
+"ApplicationDescription"="Local-first genealogy for the AI era"
+
+[HKEY_CURRENT_USER\Software\Doru\Capabilities\FileAssociations]
+".doru"="Doru.Tree"
+".ged"="Doru.Gedcom"
+".gdz"="Doru.Gedzip"
+
+[HKEY_CURRENT_USER\Software\RegisteredApplications]
+"Doru"="Software\\Doru\\Capabilities"
+
+[HKEY_CURRENT_USER\Software\Classes\Doru.Tree]
+@="Dóru family tree"
+
+[HKEY_CURRENT_USER\Software\Classes\Doru.Tree\DefaultIcon]
+@="\"$doru\\doru.exe\",0"
+
+[HKEY_CURRENT_USER\Software\Classes\Doru.Tree\shell\open\command]
+@="\"$doru\\doru.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\Doru.Gedcom]
+@="GEDCOM genealogy file"
+
+[HKEY_CURRENT_USER\Software\Classes\Doru.Gedcom\DefaultIcon]
+@="\"$doru\\doru.exe\",0"
+
+[HKEY_CURRENT_USER\Software\Classes\Doru.Gedcom\shell\open\command]
+@="\"$doru\\doru.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\Doru.Gedzip]
+@="GEDZIP genealogy archive"
+
+[HKEY_CURRENT_USER\Software\Classes\Doru.Gedzip\DefaultIcon]
+@="\"$doru\\doru.exe\",0"
+
+[HKEY_CURRENT_USER\Software\Classes\Doru.Gedzip\shell\open\command]
+@="\"$doru\\doru.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\.doru\OpenWithProgids]
+"Doru.Tree"=""
+
+[HKEY_CURRENT_USER\Software\Classes\.ged\OpenWithProgids]
+"Doru.Gedcom"=""
+
+[HKEY_CURRENT_USER\Software\Classes\.gdz\OpenWithProgids]
+"Doru.Gedzip"=""
